@@ -52,16 +52,10 @@ public class Main {
         String op;
         String[] strings = input.replace(" ", "").split("\\W");
         String[] operator = input.replace(" ", "").split("\\w");
-        for (String string : operator) {
-            int k = 0;
-            if ("+".equals(string))
-                k++;
-            if (k < 1) {
-                throw new ArithmeticException();
-            }else{
-
-
         op = operator[operator.length - 1];
+        if (operator.length>2){
+            throw new ArithmeticException();
+        }
         try {
             a = Integer.parseInt(strings[0]);
             b = Integer.parseInt(strings[1]);
@@ -101,8 +95,6 @@ public class Main {
                 }
             }
         }
-    }}
-        return null;
     }
 
     static int operation(int a, int b, String op) {
