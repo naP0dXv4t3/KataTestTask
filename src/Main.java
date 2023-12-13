@@ -6,7 +6,7 @@ import java.util.Map;
 public class Main {
     static Scanner sc = new Scanner(System.in);
     static Integer dictionaryToArab(String Value) {
-        Map<String, Integer> RomanToArab = new HashMap<String, Integer>();
+        Map<String, Integer> RomanToArab = new HashMap<>();
 
         RomanToArab.put("", 0);
         RomanToArab.put("I", 1);
@@ -18,7 +18,7 @@ public class Main {
         return RomanToArab.get(Value);
     }
     static String dictionaryToRoman(String Value) {
-        Map<String, String> ArabToRoman = new HashMap<String, String>();
+        Map<String, String> ArabToRoman = new HashMap<>();
 
         ArabToRoman.put("1","I");
         ArabToRoman.put("2","II");
@@ -43,12 +43,11 @@ public class Main {
         return ArabToRoman.get(Value);
     }
     static public Serializable calc(String input) {
-        int a = 0;
-        int b = 0;
-        int x =0;
-        int y = 0;
-        int result = 0;
-        String s;
+        int a;
+        int b;
+        int x = 0;
+        int y= 0;
+        int result;
         String op;
         String[] strings = input.replace(" ", "").split("\\W");
         String[] operator = input.replace(" ", "").split("\\w");
