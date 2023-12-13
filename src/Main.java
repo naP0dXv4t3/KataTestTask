@@ -52,9 +52,6 @@ public class Main {
         String[] strings = input.replace(" ", "").split("\\W");
         String[] operator = input.replace(" ", "").split("\\w");
         op = operator[operator.length - 1];
-        if (operator.length>2){
-            throw new ArithmeticException();
-        }
         try {
             a = Integer.parseInt(strings[0]);
             b = Integer.parseInt(strings[1]);
