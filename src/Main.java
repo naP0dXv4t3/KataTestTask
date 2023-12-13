@@ -48,10 +48,19 @@ public class Main {
         int x = 0;
         int y= 0;
         int result;
+        int k =0;
         String op;
         String[] strings = input.replace(" ", "").split("\\W");
         String[] operator = input.replace(" ", "").split("\\w");
         op = operator[operator.length - 1];
+        for (String s : operator) {
+            if (s.equals("+") || s.equals("-") || s.equals("/") ||s.equals("*") ) {
+                k++;
+            }
+        }
+        if (k>1){
+            throw new ArithmeticException();
+        }
         try {
             a = Integer.parseInt(strings[0]);
             b = Integer.parseInt(strings[1]);
